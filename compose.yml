@@ -24,7 +24,7 @@ services:
   borrow_service:
     image: vijayadk/pyapp:borrowimage
     ports:
-      - "5003:5003"
+      - "5001:5001"
     deploy:
       replicas: 1
   app_service:
