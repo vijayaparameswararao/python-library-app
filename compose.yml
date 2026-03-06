@@ -16,7 +16,7 @@ services:
     depends_on:
       - db
   books_service:
-    image: vijayadk/pyapp:booksimage
+    image: vijayadk/pyapp:bookimage
     ports:
       - "5002:5002"
     deploy:
