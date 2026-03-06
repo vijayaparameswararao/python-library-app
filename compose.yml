@@ -15,7 +15,7 @@ services:
       replicas: 1
     depends_on:
       - db
-  books_service:
+  book_service:
     image: vijayadk/pyapp:bookimage
     ports:
       - "5002:5002"
