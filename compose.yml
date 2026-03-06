@@ -10,7 +10,7 @@ services:
   auth_service:
     image: vijayadk/pyapp:authimage
     ports:
-      - "5003:5003"
+      - "5001:5001"
     deploy:
       replicas: 1
     depends_on:
@@ -24,7 +24,7 @@ services:
   borrow_service:
     image: vijayadk/pyapp:borrowimage
     ports:
-      - "5001:5001"
+      - "5003:5003"
     deploy:
       replicas: 1
   app_service:
