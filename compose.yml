@@ -2,13 +2,13 @@
 version: '3'
 services:
   db:
-    image: vijayadk/pyapp:dbimage
+    image: vijayadk/libapp:dbimage
     ports:
       - "3306:3306"
     deploy:
       replicas: 1
   auth_service:
-    image: vijayadk/pyapp:authimage
+    image: vijayadk/libapp:authimage
     ports:
       - "5001:5001"
     deploy:
@@ -16,19 +16,19 @@ services:
     depends_on:
       - db
   book_service:
-    image: vijayadk/pyapp:bookimage
+    image: vijayadk/libapp:bookimage
     ports:
       - "5002:5002"
     deploy:
       replicas: 1
   borrow_service:
-    image: vijayadk/pyapp:borrowimage
+    image: vijayadk/libapp:borrowimage
     ports:
       - "5003:5003"
     deploy:
       replicas: 1
   app_service:
-    image: vijayadk/pyapp:appimage
+    image: vijayadk/libapp:appimage
     ports:
       - "5000:5000"
     deploy:
